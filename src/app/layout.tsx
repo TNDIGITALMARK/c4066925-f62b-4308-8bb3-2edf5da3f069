@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
+import { LiveChatWidget } from "@/components/live-chat-widget";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Delta Gear - Premium Gaming Electronics",
+  description: "Unleash Your Potential with premium gaming phones and laptops featuring desktop GPUs",
 };
 
 export default function RootLayout({
@@ -41,6 +42,7 @@ export default function RootLayout({
           >
             <TooltipProvider>
               {children}
+              <LiveChatWidget />
               <Toaster />
               <Sonner />
             </TooltipProvider>
